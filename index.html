@@ -3,33 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Default</title>
-    <script>
-        function rateName() {
-            const nameInputBox = document.getElementById("nameInputBox");
-            const nameRating = document.getElementById("nameRating");
-            let rating = 0;
-            if (nameInputBox != null) {
-                let name = nameInputBox.value.split(" ")[0].toLowerCase();
-                switch (name) {
-                    case "tom":
-                        rating = 11;
-                        break;
-                    case "irina":
-                        rating = 10;
-                        break;
-                    default:
-                        sum = 0;
-                        for (let i = 0; i < name.length; i++) {
-                            sum += name.charCodeAt(i);
-                        }
-                        rating = sum % 10;
-                        break;
-                }
-
-                nameRating.innerHTML = `I give your name a ${rating}/10.`;
-            }
-        }
-    </script>
+    <script src="name.js"></script>
 </head>
 <body>
 <h2><center>Irina Pecherskaia</center></h2><br>
@@ -42,7 +16,7 @@
 </ul><br>
 
 <p>Enter your first name below!</p>
-<input type="text" id="nameInputBox" oninput="rateName()"/>
+<input type="text" id="nameInputBox"/>
 <p id="nameRating"></p>
 
 <p align="right">
