@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Default</title>
+    <script>
+        function rateName() {
+            const nameInputBox = document.getElementById("nameInputBox");
+            const nameRating = document.getElementById("nameRating");
+            let rating = 0;
+            if (nameInputBox != null) {
+                let name = nameInputBox.value.split(" ")[0].toLowerCase();
+                switch (name) {
+                    case "tom":
+                        rating = 11;
+                        break;
+                    case "irina":
+                        rating = 10;
+                        break;
+                    default:
+                        sum = 0;
+                        for (let i = 0; i < name.length; i++) {
+                            sum += name.charCodeAt(i);
+                        }
+                        rating = sum % 10;
+                        break;
+                }
+
+                nameRating.innerHTML = `I give your name a ${rating}/10.`;
+            }
+        }
+    </script>
+</head>
+<body>
+<h2><center>Irina Pecherskaia</center></h2><br>
+<h3>Major:</h3>Computer Science<br>
+<h3>Clubs and Activities:</h3>
+<ul>
+    <li>Computer Club</li>
+    <li>International Club</li>
+    <li>AI Club</li>
+</ul><br>
+
+<p>Enter your first name below!</p>
+<input type="text" id="nameInputBox" oninput="rateName()"/>
+<p id="nameRating"></p>
+
+<p align="right">
+<BODY  VLINK="#2e8b57">
+Go to <a href="about.html"> About Me </a>Page<br>
+Go to <a href="Red%20Page.html"> Red </a>Page<br>
+Go to <a href="blue.html">  Blue </a>Page<br>
+Go to <a href="green.html">  Green </a>Page<br>
+</p>
+
+</body>
+</html>
