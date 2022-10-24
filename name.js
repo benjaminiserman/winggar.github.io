@@ -1,4 +1,4 @@
-(function init() {
+(function() {
     window.onload = function() {
         const nameInputBox = document.getElementById("nameInputBox");
         const nameRating = document.getElementById("nameRating");
